@@ -1,6 +1,6 @@
 // Create metadata function for 
 function metadata(table) {
-    d3.json("../samples.json").then((data) => {
+    d3.json(".../samples.json").then((data) => {
         var metadata = data.metadata;
         var demographic = metadata.filter(value => value.id == table);
         var variableResult = demographic[0];
