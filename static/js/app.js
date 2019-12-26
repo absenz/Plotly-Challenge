@@ -1,6 +1,6 @@
 // Create metadata function for 
 function metadata(table) {
-    d3.json("../samples.json").then((data) => {
+    d3.json("https://absenz.github.io/Plotly-Challenge/samples.json").then((data) => {
         var metadata = data.metadata;
         var demographic = metadata.filter(value => value.id == table);
         var variableResult = demographic[0];
@@ -27,7 +27,7 @@ function init() {
     var selector = d3.select('#selDataset');
 
     // Read in file
-    d3.json("../samples.json").then(function(data) {
+    d3.json("https://absenz.github.io/Plotly-Challenge/samples.json").then(function(data) {
 
         // Display data in console
         console.log(data.names);
@@ -50,7 +50,7 @@ function init() {
     metadata(initial_sample)
 
     // Read data.json
-    d3.json("../samples.json").then((data) => {
+    d3.json("https://absenz.github.io/Plotly-Challenge/samples.json").then((data) => {
 
         // Create Data 
         var data = data.samples;
@@ -102,7 +102,7 @@ function init() {
     })
 
     // Read data.json
-    d3.json("../samples.json").then((data) => {
+    d3.json("https://absenz.github.io/Plotly-Challenge/samples.json").then((data) => {
 
         // Create Data Variable
         var data = data.samples;
